@@ -18,7 +18,9 @@ const errorResponder = (req, res, path) => {
 }
 
 const pageNotFound = (req, res, next) => {
-  res.status(404).render('Page Not Found');
+  res.locals.message = 'Page Not Found';
+  res.locals.error = 'Page Not Found';
+  res.status(404).render('error');
 };
 
 module.exports = {

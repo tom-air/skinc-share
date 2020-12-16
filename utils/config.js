@@ -25,6 +25,8 @@ const defaultConfig = {
   },
   accessKey: process.env.ALI_ACCESS_KEY,
   accessSecret: process.env.ALI_ACCESS_SECRET,
+  bucketRegion: process.env.ALI_REGION,
+  bucketName: process.env.ALI_BUCKET_NAME,
   subAppDomain: process.env.SUP_DOMAIN,
 };
 
