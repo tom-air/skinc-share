@@ -1,0 +1,37 @@
+<section>
+  <img src="/cny2021/images/gold.png" id="gold-ele" />
+  <img src="/cny2021/images/logo.svg" id="logo-en" />
+  <img src="/cny2021/images/chinese.svg" id="logo-ch" />
+  <div id="video-container">
+    <video id="video" controls="controls" preload="metadata" autoplay>
+      <source src={{videoPath}} type="video/mp4">
+    </video>
+    <div id="video-bg"></div>
+  </div>
+  <div class="share-section">
+    <p class="social">下载并分享动态视频到<br/>
+    <img id="weibo" src="/cny2021/images/weibo.svg" />微博或
+    <img id="wechat" src="/cny2021/images/wechat.svg" />微信，带上话题</p>
+    {{!-- <div id="copy-hashtag">
+      #修丽可##三亚国际免税城#
+      <img src="/cny2021/images/copy.svg" />
+    </div> --}}
+    <div id="hashtag-group">
+      <img id="hashtagBg" src="/cny2021/images/hashtagBg.svg" />
+      <img id="hashtag" src="/cny2021/images/hashtag.svg" />
+      <div id="hash-msg">复制成功</div>
+    </div>
+    <p class="direction">向美容顾问展示
+      <br />即可获得<span class="color-word">修丽可品牌红包袋一份。</span>
+      <br />
+      {{!-- (每个ID限拿一份) --}}
+    </p>
+    <div id="download-btn">
+      <a href={{videoPath}} download="skin-ceuticals視頻.mp4">
+        <img id="download" src="/cny2021/images/download.svg" />
+        下载视频
+      </a>
+    </div>
+    <div class="small">*每个ID仅可参加一次，最终解释权归商家所有。</div class="small">
+  </div>
+</section>

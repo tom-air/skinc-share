@@ -1,0 +1,221 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
+}
+
+/* body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/red-bg.png');
+} */
+
+img, canvas {
+  pointer-events: none;
+  touch-action: none;
+}
+
+button {
+  outline: none;
+}
+
+#root {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/red-bg.png');
+  pointer-events: none;
+  touch-action: none;
+  /* background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/background.png'); */
+}
+
+#root >section {
+  text-align: center;
+  margin: 0 auto;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 46.182266009vh;
+  color: white;
+  position: relative;
+  pointer-events: none;
+  touch-action: none;
+}
+
+#app-disclaimer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  font-size: 0.9vh;
+  line-height: 1.5vh;
+  margin-bottom: 0.5vh;
+  opacity: 0.8;
+}
+
+#app-disclaimer p {
+  margin:0;
+  text-align: center;
+  color: #E3D6C3;
+}
+
+#app-disclaimer a {
+  display: inline;
+  margin: 0 auto;
+  color: #E3D6C3;
+}
+
+/* page */
+#gold-ele {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#logo-en {
+  margin: 1.6vh;
+  width: 26.5vh;
+}
+
+#logo-ch {
+  width: 19vh;
+  margin-bottom: 1.6vh;
+}
+
+#video-container {
+  position: relative;
+  width: 27vh;
+  height: 47vh;
+  margin: 0 auto;
+}
+
+#video {
+  width: 100%;
+  height: 100%;
+}
+
+#video-container #video-bg {
+  background: transparent linear-gradient(180deg, #2C0001CB 0%, #250200CB 100%) 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  opacity: 1;
+  filter: blur(30px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.share-section {
+  font-size: 1.6vh;
+  line-height: 2.7vh;
+  margin: 0vh auto;
+  width: 35.6vh;
+  color: #FFF3E5;
+}
+
+.share-section img {
+  width: 2.3vh;
+  margin: 0 0.2vh;
+}
+
+.share-section #hashtag-group {
+  position: relative;
+  pointer-events: all !important;
+  touch-action: auto !important;
+}
+
+video {
+  pointer-events: all !important;
+  touch-action: auto !important;
+}
+
+.share-section img#hashtagBg {
+  width: 28.4vh;
+}
+
+.share-section img#hashtag {
+  width: 21.5vh;
+  position: absolute;
+  top: 40%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
+
+.share-section #hash-msg {
+  display: none;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.6vh;
+  line-height: 1.6vh;
+  color: #F5CFB3;
+  background: transparent -webkit-linear-gradient(180deg, #F5CFB3 0%, #ECC899 52%, #F8E8CA 53%, #F2BD8B 83%, #F69570 100%) 0% 0% no-repeat padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.share-section p.social {
+  margin-bottom: 0.2vh;
+}
+
+.share-section p.direction {
+  margin-top: 0.4vh;
+  margin-bottom: 0;
+}
+
+.color-word {
+  color: #F7D6A6;
+}
+
+#download-btn {
+  background: transparent linear-gradient(106deg, #B45F2A 0%, #F0BC88 26%, #FAC199 45%, #F8CCA0 49%, #F2BD8B 80%, #B45F2A 100%) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  width: 15.6vh;
+  height: 4vh;
+  padding: 0.4vh;
+  color: #72021B;
+  font-size: 2vh;
+  font-weight: 700;
+  margin: 1.4vh auto;
+}
+
+#download-btn>a {
+  background: transparent linear-gradient(118deg, #F5CFB3 0%, #ECC899 52%, #F8E8CA 53%, #F2BD8B 83%, #F69570 100%) 0% 0% no-repeat padding-box;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #72021B;
+  text-decoration: none;
+  pointer-events: all !important;
+  touch-action: auto !important;
+}
+
+#download-btn img#download {
+  height: 1.9vh;
+}
+
+.small {
+  font-size: 1.25vh;
+}
