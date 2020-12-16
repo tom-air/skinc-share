@@ -12,3 +12,5 @@ node_modules
 # Credentials
 .env
 .DS_Store
+/public/share
+*.pem

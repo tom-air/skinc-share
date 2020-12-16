@@ -20,7 +20,7 @@ html, body {
   background-image: url('../images/red-bg.png');
 } */
 
-img, canvas, video {
+img, canvas {
   pointer-events: none;
   touch-action: none;
 }
@@ -90,19 +90,19 @@ button {
 }
 
 #logo-en {
-  margin: 2.5vh;
-  width: 27vh;
+  margin: 1.6vh;
+  width: 26.5vh;
 }
 
 #logo-ch {
   width: 19vh;
-  margin-bottom: 2.5vh;
+  margin-bottom: 1.6vh;
 }
 
 #video-container {
   position: relative;
   width: 27vh;
-  height: 48vh;
+  height: 47vh;
   margin: 0 auto;
 }
 
@@ -125,8 +125,8 @@ button {
 }
 
 .share-section {
-  font-size: 2vh;
-  line-height: 3vh;
+  font-size: 1.6vh;
+  line-height: 2.7vh;
   margin: 0vh auto;
   width: 35.6vh;
   color: #FFF3E5;
@@ -139,6 +139,11 @@ button {
 
 .share-section #hashtag-group {
   position: relative;
+  pointer-events: all !important;
+  touch-action: auto !important;
+}
+
+video {
   pointer-events: all !important;
   touch-action: auto !important;
 }
@@ -175,7 +180,7 @@ button {
 }
 
 .share-section p.direction {
-  margin-top: 0.8vh;
+  margin-top: 0.4vh;
   margin-bottom: 0;
 }
 
@@ -192,15 +197,19 @@ button {
   color: #72021B;
   font-size: 2vh;
   font-weight: 700;
-  margin: 1.8vh auto;
+  margin: 1.4vh auto;
 }
 
-#download-btn>div {
+#download-btn>a {
   background: transparent linear-gradient(118deg, #F5CFB3 0%, #ECC899 52%, #F8E8CA 53%, #F2BD8B 83%, #F69570 100%) 0% 0% no-repeat padding-box;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #72021B;
+  text-decoration: none;
+  pointer-events: all !important;
+  touch-action: auto !important;
 }
 
 #download-btn img#download {

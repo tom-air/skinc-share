@@ -1,45 +1,54 @@
 const express = require('express');
-const formidable = require('formidable');
+// const formidable = require('formidable');
+const { uuid } = require('uuidv4');
 const OSS = require('ali-oss');
-const fs = require('fs');
+// const fs = require('fs');
 const multer = require('multer');
 const config = require('../utils/config');
 const logger = require('../utils/logger');
 
 const router = express.Router();
 
-const client = new OSS({
-  region: config.bucketRegion,
-  accessKeyId: config.accessKey,
-  accessKeySecret: config.accessSecret,
-  bucket: config.bucketName,
-});
+// const client = new OSS({
+//   region: config.bucketRegion,
+//   accessKeyId: config.accessKey,
+//   accessKeySecret: config.accessSecret,
+//   bucket: config.bucketName,
+// });
 
-router.get('/', async (req, res) => {
-  let result = await client.listBuckets();
-  console.log('>>>>', result);
-  res.status(200).send('get api');
-})
+// router.get('/', async (req, res) => {
+//   let result = await client.listBuckets();
+//   console.log('>>>>', result);
+//   res.status(200).send('get api');
+// })
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './public/share')
   },
   filename: function (req, file, cb) {
-    const filename = new Date().getTime();
-    cb(null, `${filename.toString()}.mp4`)
+    const filename = uuid();
+    cb(null, `${filename}.mp4`)
   }
 });
 const uploadMem = multer({ storage: storage });
 
 router.post('/upload-video', uploadMem.single("file"), (req, res, next) => {
   try {
-    console.log(req.file, '>>>>', req.file.buffer);
-    // fs.writeFileSync('./'+req.file.originalname , req.file.buffer)
-    console.log(" file mem  uploaded");
-    res.send(req.file);
+    console.log(req.file);
+    let url = '';
+    if (config.env === 'development') {
+      url = `https://d80d31b6ca79.ngrok.io/cny2021/${req.file.filename}`;
+    } else {
+      url = `https://skinceuticalstrasia.cn/cny2021/${req.file.filename}`;
+    }
+    res.send(url);
   } catch (e) {
     logger.log('error', e.message);
+    res.status(500).send({
+      message: 'Internal Error',
+      success: false,
+    });
   }
 })
 
