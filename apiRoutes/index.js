@@ -37,12 +37,13 @@ router.post('/upload-video', uploadMem.single("file"), (req, res, next) => {
   try {
     console.log(req.file);
     let url = '';
+    const fileName = req.file.filename ? req.file.filename.split('.')[0] : '';
     if (config.env === 'development') {
-      url = `https://d80d31b6ca79.ngrok.io/cny2021/share/${req.file.filename}`;
+      url = `https://d80d31b6ca79.ngrok.io/cny2021/share/${fileName}`;
     } else {
-      url = `https://skinceuticalstrasia.cn/cny2021/share/${req.file.filename}`;
+      url = `https://skinceuticalstrasia.cn/cny2021/share/${fileName}`;
     }
-    res.send({ url });
+    res.send(url);
   } catch (e) {
     logger.log('error', e.message);
     res.status(500).send({
