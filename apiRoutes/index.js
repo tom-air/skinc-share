@@ -1,6 +1,6 @@
 const express = require('express');
 // const formidable = require('formidable');
-const { uuid } = require('uuidv4');
+const { v4: uuidv4 } = require('uuid');
 const OSS = require('ali-oss');
 // const fs = require('fs');
 const multer = require('multer');
@@ -27,7 +27,7 @@ const storage = multer.diskStorage({
     cb(null, './public/share')
   },
   filename: function (req, file, cb) {
-    const filename = uuid();
+    const filename = uuidv4();
     cb(null, `${filename}.mp4`)
   }
 });
@@ -42,7 +42,7 @@ router.post('/upload-video', uploadMem.single("file"), (req, res, next) => {
     } else {
       url = `https://skinceuticalstrasia.cn/cny2021/${req.file.filename}`;
     }
-    res.send(url);
+    res.send({ url });
   } catch (e) {
     logger.log('error', e.message);
     res.status(500).send({
