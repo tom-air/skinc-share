@@ -38,9 +38,9 @@ router.post('/upload-video', uploadMem.single("file"), (req, res, next) => {
     console.log(req.file);
     let url = '';
     if (config.env === 'development') {
-      url = `https://d80d31b6ca79.ngrok.io/cny2021/${req.file.filename}`;
+      url = `https://d80d31b6ca79.ngrok.io/cny2021/share/${req.file.filename}`;
     } else {
-      url = `https://skinceuticalstrasia.cn/cny2021/${req.file.filename}`;
+      url = `https://skinceuticalstrasia.cn/cny2021/share/${req.file.filename}`;
     }
     res.send({ url });
   } catch (e) {

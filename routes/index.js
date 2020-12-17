@@ -19,7 +19,7 @@ router.get('/:videoId', (req, res, next) => {
     //   console.log('>>>>>file>>', data)
 
     // });
-    const filePath = `/cny2021/share/${videoId}.mp4`;
+    const filePath = `/cny2021/share/share/${videoId}.mp4`;
     res.render('index', {
       title: 'Express',
       videoPath: filePath,
