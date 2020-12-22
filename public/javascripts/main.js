@@ -31,3 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
   clipboard.on('error', () => alert('未能复制，请稍候再尝试'));
 });
+
+const triggerModal = () => {
+  const popupModal = document.getElementById('popup-overlay');
+  popupModal.style.display = 'block';
+}
+
+const closeModal = () => {
+  const popupModal = document.getElementById('popup-overlay');
+  popupModal.style.display = 'none';
+}

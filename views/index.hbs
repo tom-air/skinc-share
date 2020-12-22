@@ -1,3 +1,10 @@
+<div id="popup-overlay">
+  <img id="arrow-indicator" src="/cny2021/share/images/icon_arrow.png" />
+  <div id="popup-container">
+    <img id="main-con" src="/cny2021/share/images/image_download_step.png" />
+    <img id="btn-got-it" src="/cny2021/share/images/btn_got_it.png" onclick="closeModal()" />
+  </div>
+</div>
 <section>
   <img src="/cny2021/share/images/gold.png" id="gold-ele" />
   <img src="/cny2021/share/images/logo.svg" id="logo-en" />
@@ -9,6 +16,12 @@
     <div id="video-bg"></div>
   </div>
   <div class="share-section">
+    <div id="download-btn">
+      <a href={{videoPath}} download="skin-ceuticals視頻.mp4" onclick="triggerModal()">
+        <img id="download" src="/cny2021/share/images/download.svg" />
+        下载视频
+      </a>
+    </div>
     <p class="social">下载并分享动态视频到<br/>
     <img id="weibo" src="/cny2021/share/images/weibo.svg" />微博或
     <img id="wechat" src="/cny2021/share/images/wechat.svg" />微信，带上话题</p>
@@ -26,12 +39,6 @@
       <br />
       {{!-- (每个ID限拿一份) --}}
     </p>
-    <div id="download-btn">
-      <a href={{videoPath}} download="skin-ceuticals視頻.mp4">
-        <img id="download" src="/cny2021/share/images/download.svg" />
-        下载视频
-      </a>
-    </div>
     <div class="small">*每个ID仅可参加一次，最终解释权归商家所有。</div class="small">
   </div>
 </section>
