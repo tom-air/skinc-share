@@ -137,6 +137,10 @@ button {
   margin: 0 0.2vh;
 }
 
+.share-section .social img {
+  vertical-align: text-top;
+}
+
 .share-section #hashtag-group {
   position: relative;
   pointer-events: all !important;
@@ -176,7 +180,7 @@ video {
 }
 
 .share-section p.social {
-  margin-bottom: 0.2vh;
+  margin-bottom: 0.6vh;
 }
 
 .share-section p.direction {
