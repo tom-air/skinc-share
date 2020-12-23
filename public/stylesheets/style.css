@@ -167,7 +167,7 @@ video {
 .share-section #hash-msg {
   display: none;
   position: absolute;
-  top: 40%;
+  top: 41%;
   width: 100%;
   left: 50%;
   font-size: 1.6vh;
@@ -176,7 +176,7 @@ video {
   background: transparent -webkit-linear-gradient(180deg, #F5CFB3 0%, #ECC899 52%, #F8E8CA 53%, #F2BD8B 83%, #F69570 100%) 0% 0% no-repeat padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: translate(-50%, -54%);
+  transform: translate(-50%, -52%);
 }
 
 .share-section p.social {
