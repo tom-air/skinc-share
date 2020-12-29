@@ -309,6 +309,8 @@ img#android-info {
   right: 0vw;
   pointer-events: all !important;
   touch-action: auto !important;
+  height: 21.3vw;
+  width: 24.6vw;
   /* background-image: url('../images/btn_shop.png');
   background-position: center;
   background-repeat: no-repeat;
