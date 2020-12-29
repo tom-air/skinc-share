@@ -20,20 +20,21 @@ const resize = () => {
 }
 
 const wechat_mobilecheck = () => {
-  const check = false;
-  (function(a){if(/micromessenger/i.test(navigator.userAgent)) 
-      check = true;}
-  )(navigator.userAgent||navigator.vendor||window.opera);
-  return check;
+  // if( navigator.userAgent.toLowerCase().indexOf('micromessenger') > -1 || typeof navgator.wxuserAgent !== "undefined" ) {
+  //   return true;
+  // }
+  if( typeof WeixinJSBridge !== "undefined" ) {
+    return true;
+  }
+  return false;
 };
 
 document.addEventListener("DOMContentLoaded", function() {
   resize();
   window.addEventListener('resize', resize);
 
-  if (wechat_mobilecheck()) {
-    document.getElementById('open-in-wechat').style.display = 'block';
-  } else {
+  if (!wechat_mobilecheck()) {
+    document.getElementById('open-in-wechat').style.display = 'none';
     document.getElementById('main-section-content').style.display = 'block';
   }
 
