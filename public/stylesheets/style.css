@@ -33,6 +33,7 @@ button {
   padding: 4vw 0 4vw;
   top: 0;
   width: 100vw;
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -82,6 +83,10 @@ button {
 }
 
 /* page */
+section#main-section-content {
+  display: none;
+}
+
 #gold-ele {
   position: absolute;
   top: 0;
@@ -242,6 +247,40 @@ video {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#open-in-wechat {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.info-group {
+  position: absolute;
+  right: 2vh;
+  top: 6vh;
+  font-size: 2.5vh;
+  line-height: 3.6vh;
+  text-align: left;
+}
+
+.info {
+  display: flex;
+}
+
+img#safari-info {
+  width: 7.5vh;
+  margin-right: 1.5vh;
+}
+
+img#android-info {
+  width: 10vh;
+  margin: 0 -1vh;
+  margin-right: 0vh;
 }
 
 #arrow-indicator {
