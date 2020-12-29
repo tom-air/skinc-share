@@ -20,10 +20,12 @@ const resize = () => {
 }
 
 const wechat_mobilecheck = () => {
-  const check = false;
-  (function(a){if(/\bMicroMessenger\//i.test(navigator.userAgent)) 
-      check = true;}
-  )(navigator.userAgent||navigator.vendor||window.opera);
+  let check = false;
+  const ua = navigator.userAgent||navigator.vendor||window.opera;
+  console.log('>>>>>ua>>', ua)
+  if(/\bMicroMessenger\//i.test(ua)) {
+    check = true;
+  };
   return check;
 };
 
