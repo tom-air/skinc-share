@@ -22,7 +22,6 @@ const resize = () => {
 const wechat_mobilecheck = () => {
   let check = false;
   const ua = navigator.userAgent||navigator.vendor||window.opera;
-  console.log('>>>>>ua>>', ua)
   if(/\bMicroMessenger\//i.test(ua)) {
     check = true;
   };
@@ -43,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
     text: () => '#修丽可# #三亚国际免税城#',
   });
   clipboard.on('success', () => {
+    _hmt.push(['_trackEvent', 'button', 'click', 'copy-hashtag']);
     showSuccess();
   });
 
@@ -52,9 +52,15 @@ document.addEventListener("DOMContentLoaded", function() {
 const triggerModal = () => {
   const popupModal = document.getElementById('popup-overlay');
   popupModal.style.display = 'block';
+  _hmt.push(['_trackEvent', 'button', 'click', 'download-video']);
 }
 
 const closeModal = () => {
   const popupModal = document.getElementById('popup-overlay');
   popupModal.style.display = 'none';
+}
+
+const goToShop = () => {
+  _hmt.push(['_trackEvent', 'button', 'click', 'go-shop']);
+  window.open('https://ad.doubleclick.net/ddm/clk/485566413;292232190;h', '_blank');
 }

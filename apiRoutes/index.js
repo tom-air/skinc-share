@@ -35,7 +35,7 @@ const uploadMem = multer({ storage: storage });
 
 router.post('/upload-video', uploadMem.single("file"), (req, res, next) => {
   try {
-    console.log(req.file);
+    // console.log(req.file);
     let url = '';
     const fileName = req.file.filename ? req.file.filename.split('.')[0] : '';
     if (config.env === 'development') {

@@ -9,7 +9,7 @@ const router = express.Router();
 /* GET home page. */
 router.get('/:videoId', (req, res, next) => {
   const { videoId } = req.params;
-  console.log('>>', videoId)
+  // console.log('>>', videoId)
   try {
     // const filePath = path.join(__dirname, '..', 'public', 'share', `${videoId}.mp4`);
     // fs.readFile(filePath, 'utf8', (err, data) => {
