@@ -21,9 +21,16 @@ router.get('/:videoId', (req, res, next) => {
     // });
     const filePath = `/cny2021/share/share/${videoId}.mp4`;
     res.render('index', {
-      title: 'Express',
       videoPath: filePath,
     });
+  } catch (e) {
+    logger.log('error', e.message);
+  }
+});
+
+router.get('/', (req, res, next) => {
+  try {
+    res.render('index');
   } catch (e) {
     logger.log('error', e.message);
   }
