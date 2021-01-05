@@ -43,8 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
   clipboard.on('error', () => alert('未能复制，请稍候再尝试'));
 });
 
-const triggerModal = () => {
+const triggerModal = (event) => {
   if (wechat_mobilecheck()) {
+    event.preventDefault();
     document.getElementById('open-in-wechat').style.display = 'block';
     document.getElementById('main-section-content').style.display = 'none';
     _hmt.push(['_trackEvent', 'button', 'click', 'download-video']);
