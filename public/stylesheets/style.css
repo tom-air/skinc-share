@@ -84,7 +84,7 @@ button {
 
 /* page */
 section#main-section-content {
-  display: none;
+  display: block;
 }
 
 #gold-ele {

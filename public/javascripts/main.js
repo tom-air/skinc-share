@@ -32,12 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
   resize();
   window.addEventListener('resize', resize);
 
-  if (wechat_mobilecheck()) {
-    document.getElementById('open-in-wechat').style.display = 'block';
-  } else {
-    document.getElementById('main-section-content').style.display = 'block';
-  }
-
   let clipboard = new ClipboardJS('#hashtag-group', {
     text: () => '#修丽可# #三亚国际免税城#',
   });
@@ -50,14 +44,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const triggerModal = () => {
-  const popupModal = document.getElementById('popup-overlay');
-  popupModal.style.display = 'block';
-  _hmt.push(['_trackEvent', 'button', 'click', 'download-video']);
+  if (wechat_mobilecheck()) {
+    document.getElementById('open-in-wechat').style.display = 'block';
+    document.getElementById('main-section-content').style.display = 'none';
+    _hmt.push(['_trackEvent', 'button', 'click', 'download-video']);
+  } else {
+    const popupModal = document.getElementById('popup-overlay');
+    popupModal.style.display = 'block';
+    _hmt.push(['_trackEvent', 'button', 'click', 'download-video']);
+  }
 }
 
 const closeModal = () => {
-  const popupModal = document.getElementById('popup-overlay');
-  popupModal.style.display = 'none';
+  if (wechat_mobilecheck()) {
+    document.getElementById('open-in-wechat').style.display = 'none';
+    document.getElementById('main-section-content').style.display = 'block';
+  } else {
+    const popupModal = document.getElementById('popup-overlay');
+    popupModal.style.display = 'none';
+  }
 }
 
 const goToShop = () => {
