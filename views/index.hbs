@@ -23,11 +23,8 @@
   <img src="/cny2021/share/images/logo.svg" id="logo-en" />
   <img src="/cny2021/share/images/chinese.svg" id="logo-ch" />
   <div id="video-container">
-    <video id="video" controls="controls" preload="metadata" autoplay>
-      {{#if videoPath}}
+    <video id="video" controls preload="metadata" autoplay>
       <source src={{videoPath}} type="video/mp4">
-      {{!-- {{#if videoPath}}
-      {{/if}} --}}
     </video>
     <div id="video-bg"></div>
   </div>
