@@ -114,6 +114,8 @@ section#main-section-content {
 #video {
   width: 100%;
   height: 100%;
+  width: 58.5vw;
+  height: 100.7vw;
 }
 
 #video-container #video-bg {
