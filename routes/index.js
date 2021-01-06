@@ -22,6 +22,7 @@ router.get('/:videoId', (req, res, next) => {
     const filePath = `/cny2021/share/share/${videoId}.mp4`;
     res.render('index', {
       videoPath: filePath,
+      videoId: videoId,
     });
   } catch (e) {
     logger.log('error', e.message);

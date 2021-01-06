@@ -42,21 +42,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
   clipboard.on('error', () => alert('未能复制，请稍候再尝试'));
 
-  // canvas截取视频第一帧作为图片
-  const wrapper = document.getElementById('wrapper')
-  const video = document.getElementById('video');
-  const cut = function () {
-    const { width, height, x, y } = video.getBoundingClientRect();
-      let canvas = document.createElement("canvas"); // 创建画布
-      canvas.width = width;
-      canvas.height = height; // 设定宽高比
-      canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height); // 将视频此刻帧数画入画布
-      let img = document.createElement("img");
-      img.src = canvas.toDataURL("image/png");
-      // video.setAttribute('poster', img.src);
-      wrapper.appendChild(img); // 写入到Dom
-  };
-  video.addEventListener('loadeddata', cut); // 在视频帧数已加载时执行截取
+  // // canvas截取视频第一帧作为图片
+  // const wrapper = document.getElementById('wrapper')
+  // const video = document.getElementById('video');
+  // const cut = function () {
+  //   const { width, height, x, y } = video.getBoundingClientRect();
+  //     let canvas = document.createElement("canvas"); // 创建画布
+  //     canvas.width = width;
+  //     canvas.height = height; // 设定宽高比
+  //     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height); // 将视频此刻帧数画入画布
+  //     let img = document.createElement("img");
+  //     img.src = canvas.toDataURL("image/png");
+  //     // video.setAttribute('poster', img.src);
+  //     wrapper.appendChild(img); // 写入到Dom
+  // };
+  // video.addEventListener('loadeddata', cut); // 在视频帧数已加载时执行截取
 });
 
 const triggerModal = (event) => {
