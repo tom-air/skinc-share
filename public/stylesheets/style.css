@@ -118,6 +118,13 @@ section#main-section-content {
   height: 100.7vw;
 }
 
+#wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 #video-container #video-bg {
   background: transparent linear-gradient(180deg, #2C0001CB 0%, #250200CB 100%) 0% 0% no-repeat padding-box;
   border: 1px solid #707070;
